@@ -1,32 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './Button';
 import './Navbar.css';
+import logo from './images/shaun-shines-detailing-logo-optimized.png';
 
 export function Navbar() {
   const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
-  const showButton = () => {
-    window.innerWidth <= 960 ? setButton(false) : setButton(true);
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
   return (
     <>
+      <section className='address-box'>
+        <a
+          id='address'
+          href='https://www.google.com/maps/place/Shaun+Shines+Automotive+Detailing/@36.8141086,-76.1014505,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd628d231aa7bdf57!8m2!3d36.8141086!4d-76.0992618?authuser=5'>
+          <i className='bi bi-geo-alt-fill'></i> 3642 Holland Road Unit 103,
+          Virgina Beach, VA 23452
+        </a>
+      </section>
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <i class='fas fa-soap'> </i>
-            Shaun Shines
+            <img src={logo} alt='Shaun Shines Logo' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -51,7 +47,7 @@ export function Navbar() {
               </Link>
             </li>
           </ul>
-          {button && <Button buttonStyle='btn--outine'>Book Service</Button>}
+          {/* {button && <Button buttonStyle='btn--outine'>Book Service</Button>} */}
         </div>
       </nav>
     </>

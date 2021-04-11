@@ -1,31 +1,8 @@
 @import './Theme.css';
 
-img {
-  display: block;
-  max-width: 100%;
-}
-.hiddenH1 {
-  display: none;
-}
 .title-bar {
-  /* background-color: rgba(0, 0, 0, 0.5); */
   height: 20%;
   width: 100%;
-}
-.address-box {
-  width: 100%;
-  background: black;
-}
-#address {
-  color: var(--theme-orange);
-  font-size: 1.55em;
-  letter-spacing: 3px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 5em;
-}
-#address:hover {
-  color: var(--theme-bluegrey);
 }
 .headerContact {
   display: flex;
@@ -36,10 +13,12 @@ img {
   font-weight: bold;
   letter-spacing: 2px;
   position: fixed;
-  margin-left: 1.35em;
+  margin-left: 1.75em;
   margin-top: 1.25em;
-  padding: 0;
+  padding-inline: 0.4em;
+  border-radius: 1em;
   color: var(--theme-orange);
+  background-color: rgba(0, 0, 0, 0.65);
 }
 .headerPhoneNumber {
   font-size: 1.35em;
@@ -49,8 +28,10 @@ img {
   margin-bottom: 0;
 }
 .headerPhoneNumber:hover,
-.headerEmail:hover {
-  color: var(--theme-blue);
+.headerEmail:hover,
+#scheduleService:hover {
+  color: var(--theme-offwhite);
+  cursor: pointer;
 }
 .headerEmail {
   font-size: 1.25em;
@@ -63,87 +44,28 @@ img {
 }
 #scheduleService {
   font-size: 1.7em;
-  color: var(--theme-orange);
+  color: var(--theme-blue);
   font-weight: normal;
   text-decoration: none;
 }
 #scheduleService:hover {
-  cursor: pointer;
-  color: var(--theme-blue);
+  color: var(--theme-offwhite);
   font-weight: bolder;
 }
-/* nav {
-  display: none;
-  text-align: right;
-  margin-right: 12px;
-  padding: 0;
-  width: 100%;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav li {
-  margin-bottom: 0.25em;
-  margin-right: 3em;
-}
-nav a {
-  color: black;
-  text-decoration: none;
-  font-size: 0.75em;
-  text-transform: uppercase;
-}
-nav a:hover {
-  color: white;
-}
-.nav-toggle {
-  display: none;
-}
-.nav-toggle:checked ~ nav {
-  display: block;
-}
-.nav-toggle-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 2em;
-  margin-right: 1.25em;
-  height: 5%;
-  display: flex;
-  align-items: center;
-}
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  display: block;
-  background: var(--theme-darkblue);
-  height: 5px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-.nav-toggle-label span::before {
-  bottom: 12px;
-}
-.nav-toggle-label span::after {
-  top: 7px;
-} */
 .header {
-  position: absolute;
   text-align: center;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./images/car-door-open-header-optimized.jpg');
+  background: black;
+  background-image: url('./images/shaun-orange-camaro.JPG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .headerGraphics {
-  display: flex;
+  height: 50vh;
   flex-direction: column;
   align-items: center;
   justify-items: center;

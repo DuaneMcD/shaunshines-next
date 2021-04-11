@@ -1,0 +1,30 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-blue) black;
+}
+
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme-blue);
+  border-radius: 2.5px;
+  border: 0px solid white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--theme-darkblue);
+}
