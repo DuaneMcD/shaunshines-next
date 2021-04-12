@@ -56,8 +56,8 @@ ul {
 }
 #features > div:hover {
   cursor: pointer;
-  color: blueviolet;
-  border: 2px dashed blueviolet;
+  color: var(--theme-blue);
+  border: 2px dashed var(--theme-blue);
 }
 #features > div > h4 {
   font-size: 1.75em;

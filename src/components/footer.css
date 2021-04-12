@@ -1,14 +1,11 @@
 @import './Theme.css';
 
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  position: relative;
-  left: 0;
-  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'hours logo social';
+  width: 100vw;
   color: white;
   background-color: black;
 
@@ -20,12 +17,15 @@
   padding-top: 1.25em;
 }
 .hours {
+  grid-area: hours;
   text-decoration: none;
   color: white;
 }
 .centerCol {
-  margin-left: 10em;
-  margin-right: 10em;
+  grid-area: logo;
+}
+#socialIcons {
+  grid-area: social;
 }
 .bi.bi-facebook {
   color: blue;

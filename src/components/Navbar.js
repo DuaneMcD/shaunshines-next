@@ -20,35 +20,40 @@ export function Navbar() {
         </a>
       </section>
       <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            <img src={logo} alt='Shaun Shines Logo' />
-          </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                Home
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/services'
-                className='nav-links'
-                onClick={closeMobileMenu}>
-                Services
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-                About
-              </Link>
-            </li>
-          </ul>
-          {/* {button && <Button buttonStyle='btn--outine'>Book Service</Button>} */}
+        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+          <img className='shaunShinesLogo' src={logo} alt='Shaun Shines Logo' />
+        </Link>
+        <div className='menu-icon' onClick={handleClick}>
+          <i className={click ? 'fas fa-times' : 'fas fa-bars'}></i>
         </div>
+        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+          <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              Home
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='/schedule'
+              className='nav-links'
+              onClick={closeMobileMenu}>
+              Schedule Service
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link
+              to='/services'
+              className='nav-links'
+              onClick={closeMobileMenu}>
+              Services
+            </Link>
+          </li>
+          <li className='nav-item'>
+            <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+              About
+            </Link>
+          </li>
+        </ul>
       </nav>
     </>
   );

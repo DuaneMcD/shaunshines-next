@@ -1,15 +1,13 @@
 import React from 'react';
 import '../../App.css';
-import HomeContent from '../HomeContent';
-import Contact from '../Contact';
+import Schedule from '../Schedule';
 
 export function Home() {
   return (
     <>
-      <HomeContent />
-      <Contact />
+      <Schedule />
     </>
   );
 }
 
-export default Home;
+export default Schedule;

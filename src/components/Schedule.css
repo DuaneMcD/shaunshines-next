@@ -1,0 +1,80 @@
+.shop {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+  grid-template-rows: masonry;
+  grid-template-areas:
+    '.     .        .      .       .     .'
+    '.     .      title   title    .  cart'
+    '.    img      img      .     car    .'
+    '. salescopy salescopy  .   service  .'
+    '.  disclaim disclaim   .     add    .';
+
+  font-family: var(--theme-font-varela);
+  font-size: 2em;
+  text-align: center;
+  background-color: var(--theme-offwhite);
+  /* border: 0.5em solid black; */
+}
+.cart {
+  grid-area: cart;
+  font-size: 1.2em;
+  height: 2em;
+  grid-area: cart;
+  color: var(--theme-orange);
+  background: transparent;
+  border: none;
+}
+.title {
+  grid-area: title;
+  font-size: 1em;
+  margin-block: 1em;
+}
+.shopImage {
+  grid-area: img;
+  width: 75%;
+}
+.salesCopy {
+  grid-area: salescopy;
+  font-size: 0.5em;
+}
+.disclaimer {
+  grid-area: disclaim;
+  font-size: 0.5em;
+}
+.carpicker {
+  grid-area: car;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.5em;
+  width: 1fr;
+}
+.carpicker select {
+  color: white;
+  border: none;
+  background: black;
+  margin-top: 0.25em;
+}
+.carpicker div > select {
+  color: white;
+  border: none;
+  background: black;
+  width: 10em;
+}
+.prompt {
+  font-size: 1.1em;
+  margin: 0;
+}
+.dateTime {
+  color: white;
+  border: none;
+  background: black;
+  margin-top: 2em;
+}
+.detailService {
+  margin-top: 1.5em;
+}
+.addToCart {
+  grid-area: add;
+  font-size: 1em;
+  height: 1.5em;
+}
