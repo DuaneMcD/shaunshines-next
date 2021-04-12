@@ -34,10 +34,10 @@ export function Navbar() {
           </li>
           <li className='nav-item'>
             <Link
-              to='/schedule'
+              to='/schedule-online'
               className='nav-links'
               onClick={closeMobileMenu}>
-              Schedule Service
+              Schedule Online
             </Link>
           </li>
           <li className='nav-item'>

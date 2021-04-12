@@ -1,23 +1,15 @@
 import React from 'react';
 import './Schedule.css';
-import CarQuery from './CarQuery.js';
+import serviceImg from './images/tireCleaner.jpg';
 
 const Schedule = () => {
   return (
     <main className='shop'>
-      <script
-        src='https://code.jquery.com/jquery-3.6.0.min.js'
-        integrity='sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4='
-        crossOrigin='anonymous'></script>
-      <script
-        type='text/javascript'
-        src='http://www.carqueryapi.com/js/carquery.0.3.4.js'></script>
-      <script src={CarQuery}></script>
       <button id='cart' className='cart'>
         <i className='bi bi-cart-fill'></i>
       </button>
       <h1 className='title'>Schedule Service</h1>
-      <img className='shopImage' src='./images/tireCleaner.jpg' alt='' />
+      <img className='shopImage' src={serviceImg} alt='' />
       <p className='salesCopy'>
         Shaun Shines offers bespoke detailing services to suite your vehicle
         needs. <br />
@@ -62,13 +54,6 @@ const Schedule = () => {
           required>
           <option value=''>Select a trim</option>
         </select>
-        <input
-          type='datetime-local'
-          id='dateTime'
-          className='dateTime'
-          step='3600'
-          required
-        />
         <p className='prompt detailService'>Detail service:</p>
         <select className='vehicle service'>
           <option value='Select a Service' required>
@@ -79,8 +64,18 @@ const Schedule = () => {
           <option value='Interior'>Interior Only</option>
           <option value='Custom'>Custom Package</option>
         </select>
+        <input
+          type='datetime-local'
+          id='dateTime'
+          className='dateTime'
+          step='3600'
+          required
+        />
       </div>
-      <button className='addToCart'>Add to cart</button>
+      <div className='addService'>
+        <p>$100.00</p>
+        <button className='addToCart'>Add to cart</button>
+      </div>
     </main>
   );
 };

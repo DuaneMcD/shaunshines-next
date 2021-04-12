@@ -1,19 +1,19 @@
 .shop {
   display: grid;
-  grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
   grid-template-rows: masonry;
   grid-template-areas:
-    '.     .        .      .       .     .'
-    '.     .      title   title    .  cart'
-    '.    img      img      .     car    .'
-    '. salescopy salescopy  .   service  .'
-    '.  disclaim disclaim   .     add    .';
+    '.     .      .     .'
+    '.   title    .  cart'
+    '.    img    car    .'
+    '.    img  service  .'
+    '. salescopy  add   .'
+    '.  disclaim  .     .';
 
   font-family: var(--theme-font-varela);
   font-size: 2em;
   text-align: center;
   background-color: var(--theme-offwhite);
-  /* border: 0.5em solid black; */
 }
 .cart {
   grid-area: cart;
@@ -31,7 +31,7 @@
 }
 .shopImage {
   grid-area: img;
-  width: 75%;
+  width: 40%;
 }
 .salesCopy {
   grid-area: salescopy;
@@ -73,8 +73,10 @@
 .detailService {
   margin-top: 1.5em;
 }
-.addToCart {
+.addService {
   grid-area: add;
+}
+.addToCart {
   font-size: 1em;
   height: 1.5em;
 }
