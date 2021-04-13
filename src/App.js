@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/pages/Home';
-import About from './components/pages/About';
-import ScheduleOnline from './components/pages/ScheduleOnline';
-import Services from './components/pages/Services';
+import Home from './Components/pages/Home';
+import About from './Components/pages/About';
+import ScheduleOnline from './Components/pages/ScheduleOnline';
+import Services from './Components/pages/Services';
 
 function App() {
   return (
