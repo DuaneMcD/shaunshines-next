@@ -1,10 +1,10 @@
 .shop {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr;
   grid-template-rows: masonry;
   grid-template-areas:
     '.     .      .     .'
-    '.   title    .  cart'
+    '.   title  title  cart'
     '.    img    car    .'
     '.    img  service  .'
     '. salescopy  add   .'
@@ -41,24 +41,12 @@
   grid-area: disclaim;
   font-size: 0.5em;
 }
-.carpicker {
+.servicePicker {
   grid-area: car;
   display: flex;
   flex-direction: column;
   font-size: 0.5em;
   width: 1fr;
-}
-.carpicker select {
-  color: white;
-  border: none;
-  background: black;
-  margin-top: 0.25em;
-}
-.carpicker div > select {
-  color: white;
-  border: none;
-  background: black;
-  width: 10em;
 }
 .prompt {
   font-size: 1.1em;
@@ -69,9 +57,6 @@
   border: none;
   background: black;
   margin-top: 2em;
-}
-.detailService {
-  margin-top: 1.5em;
 }
 .addService {
   grid-area: add;

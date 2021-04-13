@@ -1,6 +1,7 @@
 import React from 'react';
 import './Schedule.css';
 import serviceImg from './images/tireCleaner.jpg';
+import CarPicker from './CarPicker';
 
 const Schedule = () => {
   return (
@@ -26,44 +27,8 @@ const Schedule = () => {
         pitted, soiled, badly scratched etc. All vehicles are reviewed for
         condition before service.
       </p>
-      <div className='carpicker'>
-        <p className='prompt'>Please select a vehicle</p>
-        <select name='car-years' id='car-years' className='vehicle year'>
-          <option value='' required>
-            Select a year
-          </option>
-        </select>
-        <select
-          name='car-makes'
-          id='car-makes'
-          className='vehicle make'
-          required>
-          <option value=''>Select a make</option>
-        </select>
-        <select
-          name='car-models'
-          id='car-models'
-          className='vehicle model'
-          required>
-          <option value=''>Select a model</option>
-        </select>
-        <select
-          name='car-model-trims'
-          id='car-model-trims'
-          className='trims'
-          required>
-          <option value=''>Select a trim</option>
-        </select>
-        <p className='prompt detailService'>Detail service:</p>
-        <select className='vehicle service'>
-          <option value='Select a Service' required>
-            Select a Service
-          </option>
-          <option value='Shine'>Make It Shine!</option>
-          <option value='Exterior'>Exterior Only</option>
-          <option value='Interior'>Interior Only</option>
-          <option value='Custom'>Custom Package</option>
-        </select>
+      <div className='servicePicker'>
+        <CarPicker />
         <input
           type='datetime-local'
           id='dateTime'
