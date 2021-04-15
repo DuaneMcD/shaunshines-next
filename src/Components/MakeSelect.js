@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
+import Select from 'react-select';
 import './MakeSelect.css';
 
-export const MakeSelect = () => {
-  const makes = ['audi', 'bmw', ' dodge'];
+const MakeSelect = () => {
+  const [makes, setMakes] = useState([]);
 
-  console.log(makes);
+  useEffect(() => {
+    fetchMakes();
+  }, []);
+  useEffect(() => {}, [makes]);
+  const fetchMakes = async () => {
+    const response = await Axios(
+      'https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json'
+    );
+    setMakes(response.data.Results.slice(0, 147));
+  };
 
   return (
-    <select name='car-makes' id='car-makes' className='vehicle make' required>
-      <option value=''>Select a make</option>
-      {makes.map(make => (
-        <option key={make}>{make}</option>
-      ))}
-    </select>
+    <Select
+      className='userSlectedMake'
+      placeholder='Enter Vehicle Make'
+      options={makes.map(make => ({
+        label: make.Make_Name,
+        value: make.Make_Name,
+      }))}
+      // onChange={opt => console.log(opt.label, opt.value)}
+    />
   );
 };
 

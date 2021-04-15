@@ -1,39 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Select from 'react-select';
 import './CarPicker.css';
-import MakeSelect from './MakeSelect';
 import YearSelect from './YearSelect';
+import MakeSelect from './MakeSelect';
+import ModelSelect from './ModelSelect';
 
-export const CarPicker = () => {
+const CarPicker = () => {
+  const [selectedYear, setSelectedYear] = useState('2007');
+  const [selectedMake, setSelectedMake] = useState('land rover');
+
+  const options = [
+    { label: 'Select a Service', value: 'Select a Service' },
+    { label: 'Shine', value: 'Shine' },
+    { label: 'Exterior', value: 'Exterior' },
+    { label: 'Interior', value: 'Interior' },
+    { label: 'Custom', value: 'Custom' },
+  ];
+
   return (
     <div className='carpicker'>
       <p className='prompt'>Please select a vehicle</p>
-      <YearSelect />
-      <MakeSelect />
-
-      <select
-        name='car-models'
-        id='car-models'
-        className='vehicle model'
-        required>
-        <option value=''>Select a model</option>
-      </select>
-      <select
-        name='car-model-trims'
-        id='car-model-trims'
-        className='trims'
-        required>
-        <option value=''>Select a trim</option>
-      </select>
+      <YearSelect
+        onChange={() => {
+          setSelectedYear(React.querySelector('.userSlectedYear').textContent);
+        }}
+      />
+      <MakeSelect
+        onChange={() => {
+          setSelectedMake(React.querySelector('.userSlectedMake').textContent);
+        }}
+      />
+      <ModelSelect make={selectedMake} year={selectedYear} />
       <p className='prompt detailService'>Detail service:</p>
-      <select className='vehicle service'>
-        <option value='Select a Service' required>
-          Select a Service
-        </option>
-        <option value='Shine'>Make It Shine!</option>
-        <option value='Exterior'>Exterior Only</option>
-        <option value='Interior'>Interior Only</option>
-        <option value='Custom'>Custom Package</option>
-      </select>
+      <Select className='vehicle service' options={options} />
     </div>
   );
 };

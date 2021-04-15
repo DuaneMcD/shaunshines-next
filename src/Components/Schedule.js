@@ -2,6 +2,7 @@ import React from 'react';
 import './Schedule.css';
 import serviceImg from './images/tireCleaner.jpg';
 import CarPicker from './CarPicker';
+// import Flatpickr from 'react-flatpickr';
 
 const Schedule = () => {
   return (
@@ -29,13 +30,14 @@ const Schedule = () => {
       </p>
       <div className='servicePicker'>
         <CarPicker />
-        <input
+        {/* <Flatpickr className='flatpikr' /> */}
+        {/* <input
           type='datetime-local'
           id='dateTime'
           className='dateTime'
           step='3600'
           required
-        />
+        /> */}
       </div>
       <div className='addService'>
         <p>$100.00</p>
