@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import './YearSelect.css';
 
-export const YearSelect = () => {
+export const YearSelect = props => {
   const currentModelYear = new Date().getFullYear() + 1;
   const [years] = useState([]);
 
@@ -18,7 +18,10 @@ export const YearSelect = () => {
         label: year,
         value: year,
       }))}
-      // onChange={opt => console.log(opt.label.key, opt.value.key)}
+      onChange={opt => {
+        console.log(opt.label.key);
+        props.function(opt.label.key);
+      }}
     />
   );
 };

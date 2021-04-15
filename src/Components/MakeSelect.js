@@ -3,7 +3,7 @@ import Axios from 'axios';
 import Select from 'react-select';
 import './MakeSelect.css';
 
-const MakeSelect = () => {
+const MakeSelect = props => {
   const [makes, setMakes] = useState([]);
 
   useEffect(() => {
@@ -25,7 +25,10 @@ const MakeSelect = () => {
         label: make.Make_Name,
         value: make.Make_Name,
       }))}
-      // onChange={opt => console.log(opt.label, opt.value)}
+      onChange={opt => {
+        console.log(opt.value);
+        props.function(opt.value);
+      }}
     />
   );
 };
