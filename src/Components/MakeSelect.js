@@ -25,9 +25,8 @@ const MakeSelect = props => {
         label: make.Make_Name,
         value: make.Make_Name,
       }))}
-      onChange={opt => {
-        console.log(opt.value);
-        props.function(opt.value);
+      onChange={e => {
+        props.function(e.value);
       }}
     />
   );

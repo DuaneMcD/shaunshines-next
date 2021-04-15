@@ -5,9 +5,9 @@
   grid-template-areas:
     '.     .      .     .'
     '.   title  title  cart'
-    '.    img    car    .'
-    '.    img  service  date'
-    '. salescopy  add   .'
+    '.    img   select  .'
+    '.    img     .  date'
+    '. salescopy button .'
     '.  disclaim  .     .';
 
   font-family: var(--theme-font-varela);
@@ -42,13 +42,13 @@
   font-size: 0.5em;
 }
 .servicePicker {
-  grid-area: car;
+  grid-area: select;
   display: flex;
   flex-direction: column;
   font-size: 0.5em;
   width: 1fr;
 }
-.prompt {
+.promptSelectService {
   font-size: 1.1em;
   margin: 0;
 }
@@ -59,7 +59,7 @@
   margin-top: 2em;
 }
 .addService {
-  grid-area: add;
+  grid-area: button;
 }
 .addToCart {
   font-size: 1em;

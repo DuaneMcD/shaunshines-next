@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Schedule.css';
 import serviceImg from './images/tireCleaner.jpg';
 import CarPicker from './CarPicker';
+import PurchaseButton from './PurchaseButton';
 // import Flatpickr from 'react-flatpickr';
 
 const Schedule = () => {
+  const [estimate, setEstimate] = useState();
+
   return (
     <main className='shop'>
       <button id='cart' className='cart'>
@@ -28,21 +31,8 @@ const Schedule = () => {
         pitted, soiled, badly scratched etc. All vehicles are reviewed for
         condition before service.
       </p>
-      <div className='servicePicker'>
-        <CarPicker />
-        {/* <Flatpickr className='flatpikr' /> */}
-        {/* <input
-          type='datetime-local'
-          id='dateTime'
-          className='dateTime'
-          step='3600'
-          required
-        /> */}
-      </div>
-      <div className='addService'>
-        <p>$100.00</p>
-        <button className='addToCart'>Add to cart</button>
-      </div>
+      <CarPicker />
+      <PurchaseButton />
     </main>
   );
 };

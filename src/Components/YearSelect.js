@@ -18,9 +18,8 @@ export const YearSelect = props => {
         label: year,
         value: year,
       }))}
-      onChange={opt => {
-        console.log(opt.label.key);
-        props.function(opt.label.key);
+      onChange={e => {
+        props.function(e.label.key);
       }}
     />
   );

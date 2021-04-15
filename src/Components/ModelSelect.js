@@ -6,8 +6,8 @@ import './ModelSelect.css';
 const ModelSelect = props => {
   return (
     <Select
-      className='userSlectedModel'
-      placeholder='Enter Vehicle Model'
+      className='selectModel'
+      placeholder='Select Vehicle Model'
       models={props.models}
       options={props.models.map(model => ({
         label: model.Model_Name,

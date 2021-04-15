@@ -13,7 +13,7 @@ const CarPicker = () => {
   const apiURL = `https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformakeyear/make/${selectedMake}/modelyear/${selectedYear}?format=json`;
   const options = [
     { label: 'Select a Service', value: 'Select a Service' },
-    { label: 'Shine', value: 'Shine' },
+    { label: 'Make it Shine!', value: 'Shine' },
     { label: 'Exterior', value: 'Exterior' },
     { label: 'Interior', value: 'Interior' },
     { label: 'Custom', value: 'Custom' },
@@ -24,18 +24,26 @@ const CarPicker = () => {
     setModels(response.data.Results);
   };
 
+  const displayEstimate = () => {};
+
   useEffect(() => {
-    if (selectedYear && selectedMake) fetchModels();
+    if (selectedYear && selectedMake) {
+      fetchModels();
+      document.querySelector('.selectModel').label = 'RESET';
+    }
   }, [selectedYear, selectedMake]);
 
   return (
-    <div className='carpicker'>
+    <div className='servicePicker'>
       <p>Please select a vehicle</p>
-      <YearSelect function={setSelectedYear} />
+      <YearSelect
+        function={setSelectedYear}
+        onChange={console.log(selectedYear)}
+      />
       <MakeSelect function={setSelectedMake} />
       <ModelSelect make={selectedMake} year={selectedYear} models={models} />
-      <p className='prompt detailService'>Detail service:</p>
-      <Select className='vehicle service' options={options} />
+      <p className='promptSelectService'>Detail service:</p>
+      <Select className='selectService' options={options} />
     </div>
   );
 };
