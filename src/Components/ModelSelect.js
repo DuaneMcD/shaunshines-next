@@ -11,6 +11,9 @@ const ModelSelect = props => {
   useEffect(() => {
     fetchModels();
   });
+  // useEffect(() => {
+  //   props.fetchModeAPI();
+  // }, [props]);
 
   const fetchModels = async () => {
     const response = await Axios(apiURL);
