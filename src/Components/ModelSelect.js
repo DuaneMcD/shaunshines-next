@@ -13,6 +13,9 @@ const ModelSelect = props => {
         label: model.Model_Name,
         value: model.Model_Name,
       }))}
+      onChange={e => {
+        props.function(e.value);
+      }}
     />
   );
 };

@@ -19,7 +19,7 @@ export const YearSelect = props => {
         value: year,
       }))}
       onChange={e => {
-        props.function(e.label.key);
+        props.function(Number(e.label.key));
       }}
     />
   );

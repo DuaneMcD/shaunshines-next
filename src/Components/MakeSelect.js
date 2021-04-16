@@ -17,13 +17,24 @@ const MakeSelect = props => {
     setMakes(response.data.Results.slice(0, 147));
   };
 
+  const toProperCase = string => {
+    string = string.toLowerCase().split(' ');
+
+    let final = [];
+
+    for (let word of string) {
+      final.push(word.charAt(0).toUpperCase() + word.slice(1));
+    }
+    return final.join(' ');
+  };
+
   return (
     <Select
-      className='userSlectedMake'
+      className='userSelectedMake'
       placeholder='Enter Vehicle Make'
       options={makes.map(make => ({
-        label: make.Make_Name,
-        value: make.Make_Name,
+        label: make.Make_Name.toLowerCase(),
+        value: toProperCase(make.Make_Name),
       }))}
       onChange={e => {
         props.function(e.value);
