@@ -1,12 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Schedule.css';
-import serviceImg from './images/tireCleaner.jpg';
+import serviceImg from './images/shaun-orange-camaro.JPG';
 import CarPicker from './CarPicker';
 import PurchaseButton from './PurchaseButton';
-// import Flatpickr from 'react-flatpickr';
+import { createPopper } from '@popperjs/core';
+// import DateTimePicker from 'react-datetime-picker';
+import DatePicker from 'react-date-picker';
+import TimePicker from 'react-time-picker';
 
 const Schedule = () => {
+  const [value, onChange] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(null);
   const [estimate, setEstimate] = useState();
+
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  // const datePicker = () => {
+  //   $('picker').datetimepicker({
+  //     timepicker: true,
+  //     datepicker: true,
+  //     format: 'Y-m-d H:i',
+  //     // value: {new Date()},
+  //     weeks: true,
+  //   });
+  // };
 
   return (
     <main className='shop'>
@@ -32,6 +50,16 @@ const Schedule = () => {
         condition before service.
       </p>
       <CarPicker />
+      <div className='dateTimePicker'>
+        <DatePicker
+          className='datePicker'
+          onChange={onChange}
+          value={value}
+          minDate={tomorrow}
+          // maxDate={tomorrow.getDate() + 30}
+        />
+        <TimePicker className='timePicker' onChange={onChange} value={value} />
+      </div>
       <PurchaseButton />
     </main>
   );

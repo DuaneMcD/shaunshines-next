@@ -10,8 +10,8 @@ const ModelSelect = props => {
       placeholder='Select Vehicle Model'
       models={props.models}
       options={props.models.map(model => ({
-        label: model.Model_Name,
-        value: model.Model_Name,
+        label: model.Model,
+        value: model.Model,
       }))}
       onChange={e => {
         props.function(e.value);

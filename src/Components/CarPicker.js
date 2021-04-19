@@ -26,9 +26,32 @@ const CarPicker = () => {
     { label: 'Custom', value: 'Custom' },
   ];
 
+  // const fetchModels = async () => {
+  //   const response = await Axios(models_URL);
+  //   setModels(response.data.Results);
+  // };
   const fetchModels = async () => {
-    const response = await Axios(models_URL);
-    setModels(response.data.Results);
+    const where = encodeURIComponent(
+      JSON.stringify({
+        Year: selectedYear,
+        Make: selectedMake,
+        Model: {
+          $exists: true,
+        },
+      })
+    );
+    const response = await fetch(
+      `https://parseapi.back4app.com/classes/Carmodels_Car_Model_List?limit=10&keys=Model,Category&where=${where}`,
+      {
+        headers: {
+          'X-Parse-Application-Id': 'u3RDu9JZAQ2q00JErqKwkX7HkJMpGnufuDtRB5Zi', // This is your app's application id
+          'X-Parse-REST-API-Key': 'c8ja274bg8pFb5cIAGcJryM0IjU4egzcYF3Prn5m', // This is your app's REST API key
+        },
+      }
+    );
+    const data = await response.json(); // Here you have the data that you need
+    console.log(data.results);
+    setModels(data.results);
   };
 
   const fetchVehicleCategory = async () => {
@@ -49,8 +72,8 @@ const CarPicker = () => {
       }
     );
     const data = await response.json(); // Here you have the data that you need
-    console.log(data.results);
-    setTrims([data.results[0].Category]);
+    // console.log(data.results);
+    // setTrims([data.results[0].Category]);
   };
 
   useEffect(() => {
