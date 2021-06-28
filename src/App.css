@@ -3,7 +3,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--theme-blue) black;
+  scrollbar-color: transparent;
 }
 
 *::-webkit-scrollbar {
