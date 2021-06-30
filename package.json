@@ -31,8 +31,7 @@
     "start": "next dev",
     "start-production": "next start",
     "build": "next build",
-    "test": "jest test",
-    "heroku-postbuild": "npm install && npm run build && npm run start-production"
+    "test": "jest test"
   },
   "eslintConfig": {
     "extends": [
