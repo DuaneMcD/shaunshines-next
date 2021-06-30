@@ -1,7 +1,7 @@
 {
   "name": "shaunshines-react",
   "version": "0.2.0",
-  "homepage": "http://duanemcdonald.com",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@popperjs/core": "^2.9.2",
@@ -15,7 +15,7 @@
     "datetimepicker": "^0.1.39",
     "error": "10.4.0",
     "jquery": "^3.6.0",
-    "next": "11.0.1",
+    "next": "^11.0.1",
     "node-fetch": "^2.6.1",
     "react": "^17.0.2",
     "react-datetime-picker": "^3.2.0",
