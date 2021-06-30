@@ -1,6 +1,6 @@
+// import './YearSelect.css';
 import React, { useState } from 'react';
 import Select from 'react-select';
-import './YearSelect.css';
 
 export const YearSelect = props => {
   const currentModelYear = new Date().getFullYear() + 1;

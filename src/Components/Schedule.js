@@ -1,5 +1,5 @@
+// import './Schedule.css';
 import React, { useState } from 'react';
-import './Schedule.css';
 import serviceImg from './images/shaun-orange-camaro.JPG';
 import CarPicker from './CarPicker';
 import PurchaseButton from './PurchaseButton';

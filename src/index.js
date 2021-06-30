@@ -4,9 +4,8 @@ import 'regenerator-runtime/runtime';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(
-  <App configuration={window.appConfig} />,
-  document.getElementById('root')
-);
+export default function NextIndexWrapper() {
+  return <App configuration={window.appConfig} />;
+}
 
 registerServiceWorker();

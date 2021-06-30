@@ -1,7 +1,6 @@
 import React from 'react';
-import '../../App.css';
-import HomeContent from '../HomeContent';
-import Contact from '../Contact';
+import HomeContent from '../Components/HomeContent';
+import Contact from '../Components/Contact';
 
 export function Home() {
   return (

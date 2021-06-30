@@ -1,5 +1,5 @@
+// import './Footer.css';
 import React from 'react';
-import './Footer.css';
 import thoseWhoServe from './images/honoringthosewhoserve.svg';
 import logo from './images/shaun-shines-detailing-logo-optimized.png';
 

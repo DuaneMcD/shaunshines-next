@@ -1,5 +1,5 @@
+// import './HomeContent.css';
 import React from 'react';
-import './HomeContent.css';
 
 export function HomeContent() {
   return (

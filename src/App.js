@@ -1,16 +1,26 @@
-import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
-import LiveChat from './Components/LiveChat';
-import Home from './Components/pages/Home';
-import About from './Components/pages/About';
-import ScheduleOnline from './Components/pages/ScheduleOnline';
-import Services from './Components/pages/Services';
+import Home from './pages/Home';
+import About from './pages/About';
+import ScheduleOnline from './pages/ScheduleOnline';
+import Services from './pages/Services';
+
+// CHATRA
+(function (d, w, c) {
+  w.ChatraID = '39oMWcbRD5SfacNen';
+  var s = d.createElement('script');
+  w[c] =
+    w[c] ||
+    function () {
+      (w[c].q = w[c].q || []).push(arguments);
+    };
+  s.async = true;
+  s.src = 'https://call.chatra.io/chatra.js';
+  if (d.head) d.head.appendChild(s);
+})(document, window, 'Chatra');
 
 function App() {
   return (
     <div className='App'>
-      <LiveChat configuration={window.appConfig} />
       <Router>
         <Switch>
           <Route path='/' exact component={Home} />

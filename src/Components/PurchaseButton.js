@@ -1,5 +1,5 @@
+// import './PurchaseButton.css';
 import React from 'react';
-import './PurchaseButton.css';
 
 const PurchaseButton = props => {
   return (

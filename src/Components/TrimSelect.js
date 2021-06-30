@@ -1,7 +1,7 @@
+// import './TrimSelect.css';
 import React from 'react';
 
 import Select from 'react-select';
-import './TrimSelect.css';
 
 const TrimSelect = props => {
   return (

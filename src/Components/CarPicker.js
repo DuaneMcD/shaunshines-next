@@ -1,8 +1,8 @@
+// import './CarPicker.css';
 import React, { useState, useEffect } from 'react';
 import Select from 'react-select';
 import Axios from 'axios';
 import Fetch from 'node-fetch';
-import './CarPicker.css';
 import YearSelect from './YearSelect';
 import MakeSelect from './MakeSelect';
 import ModelSelect from './ModelSelect';

@@ -1,7 +1,7 @@
+// import './MakeSelect.css';
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import Select from 'react-select';
-import './MakeSelect.css';
 
 const MakeSelect = props => {
   const [makes, setMakes] = useState([]);

@@ -1,5 +1,5 @@
+// import './HeaderGraphic.css';
 import React from 'react';
-import './HeaderGraphic.css';
 
 export function HeaderGraphic() {
   return (

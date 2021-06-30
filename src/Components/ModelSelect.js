@@ -1,7 +1,7 @@
+// import './ModelSelect.css';
 import React from 'react';
 
 import Select from 'react-select';
-import './ModelSelect.css';
 
 const ModelSelect = props => {
   return (

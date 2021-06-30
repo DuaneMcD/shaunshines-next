@@ -1,8 +1,8 @@
+// import '../../App.css';
 import React from 'react';
-import '../../App.css';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
-import Schedule from '../Schedule';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+import Schedule from '../Components/Schedule';
 
 export function ScheduleOnline() {
   return (
