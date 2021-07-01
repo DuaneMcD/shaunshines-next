@@ -39,7 +39,8 @@
   "eslintConfig": {
     "extends": [
       "react-app"
-    ]
+    ],
+    "parser": "react-scripts/node_modules/babel-eslint"
   },
   "browserslist": {
     "production": [
