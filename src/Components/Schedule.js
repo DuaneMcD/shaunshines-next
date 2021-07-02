@@ -6,7 +6,7 @@ import PurchaseButton from './PurchaseButton';
 // import { createPopper } from '@popperjs/core';
 // import DateTimePicker from 'react-datetime-picker';
 // import DatePicker from 'react-date-picker';
-import TimePicker from 'react-time-picker';
+// import TimePicker from 'react-time-picker';
 
 const Schedule = () => {
   const [value, onChange] = useState(new Date());
@@ -58,7 +58,7 @@ const Schedule = () => {
           minDate={tomorrow} 
           maxDate={tomorrow.getDate() + 30}
         */}
-        <TimePicker className='timePicker' onChange={onChange} value={value} />
+        {/* <TimePicker className='timePicker' onChange={onChange} value={value} /> */}
       </div>
       <PurchaseButton />
     </main>
