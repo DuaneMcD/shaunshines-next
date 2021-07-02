@@ -1,5 +1,3 @@
-// import '../../App.css';
-import React from 'react';
 import Navbar from '../Components/Navbar';
 import HeaderGraphic from '../Components/HeaderGraphic';
 import HeaderContact from '../Components/HeaderContact';
