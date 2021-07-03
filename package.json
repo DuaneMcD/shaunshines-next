@@ -31,6 +31,7 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "prebuild": "next telemetry disable",
     "start": "next dev",
     "start-production": "next start",
     "build": "next build",
@@ -56,6 +57,10 @@
   "devDependencies": {
     "eslint": "^7.29.0",
     "eslint-config-next": "^11.0.1"
+  },
+  "engines": {
+    "node": ">=16.x",
+    "npm": ">=7.x"
   },
   "cacheDirectories": [
     ".next/cache"
