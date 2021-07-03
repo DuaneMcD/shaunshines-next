@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    PUBLIC_URL: 'https://shaunshines-react.herokuapp.com/',
+  },
   experimental: {
     craCompat: false,
   },
