@@ -57,10 +57,6 @@
     "eslint": "^7.29.0",
     "eslint-config-next": "^11.0.1"
   },
-  "engines": {
-    "node": ">=16.x",
-    "npm": ">=7.x"
-  },
   "cacheDirectories": [
     ".next/cache"
   ]
