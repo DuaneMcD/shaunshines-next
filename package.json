@@ -61,8 +61,5 @@
   "engines": {
     "node": ">=16.x",
     "npm": ">=7.x"
-  },
-  "cacheDirectories": [
-    ".next/cache"
-  ]
+  }
 }
