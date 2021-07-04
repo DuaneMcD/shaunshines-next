@@ -1,3 +1,3 @@
 # Shaun Shines Detailing | Website (React/Next)
 
-[Click to preview www.Shaunshines.com ](https://shaunshines-react.herokuapp.com/schedule-online)
+[Click to preview www.Shaunshines.com ](https://shaunshines_next.herokuapp.com)
